@@ -1,0 +1,233 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "TestJuego#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "TestJuego",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_2127812561 { 
+   	label=Hombre
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1496900302 { 
+   	label=Hombre
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Hombre2127812561XXXJugarConRobot79133258[
+	label="+ JugarConRobot()"
+	style=filled
+	fillcolor=white
+	tooltip="Hombre
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_79133258 { 
+   	label=Robot
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1250459226 { 
+   	label=Robot
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Robot79133258XXXavanzar104431[
+	label="+ avanzar()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
+Robot79133258XXXdespertar0[
+	label="+ despertar()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
+Robot79133258XXXdormir0[
+	label="+ dormir()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
+Robot79133258XXXenergiaActual0[
+	label="+ energiaActual()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
+Robot79133258XXXestaDormido0[
+	label="+ estaDormido()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
+Robot79133258XXXpuedeAvanzar104431[
+	label="+ puedeAvanzar()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
+Robot79133258XXXretroceder104431[
+	label="+ retroceder()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_804481360 { 
+   	label=TestJuego
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_2044607950 { 
+   	label=TestJuego
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TestJuego804481360XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="TestJuego
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXavanzar104431;
+Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXdespertar0;
+Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXdormir0;
+Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXenergiaActual0;
+Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXestaDormido0;
+Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXpuedeAvanzar104431;
+Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXretroceder104431;
+Robot79133258XXXavanzar104431 -> Robot79133258XXXpuedeAvanzar104431;
+Robot79133258XXXretroceder104431 -> Robot79133258XXXpuedeAvanzar104431;
+TestJuego804481360XXXmain1859653459 -> Hombre2127812561XXXJugarConRobot79133258;
+    
+}
+@enduml
