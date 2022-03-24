@@ -8,13 +8,12 @@ public class TestJuego {
         pedrito.JugarConRobot(robotito);
 
         // Segundo hombre
-        Hombre josesito = new Hombre("josesito");
-        System.out.println(josesito.getNombre()+" va a jugar con el robotito");
-        josesito.JugarConRobot(robotito);
+        Hombre josecito = new Hombre("josecito");
+        System.out.println(josecito.getNombre()+" va a jugar con el robotito");
+        josecito.JugarConRobot(robotito);
 
 
         System.out.println(pedrito.getNombre()+" va a jugar con el robotito");
         pedrito.jugarLibremente(robotito);
-
     }
 }

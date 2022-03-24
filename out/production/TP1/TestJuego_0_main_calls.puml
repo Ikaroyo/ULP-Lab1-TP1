@@ -105,6 +105,16 @@ subgraph cluster_2127812561 {
 null"
 	fontcolor=darkgreen
 ];
+
+Hombre2127812561XXXjugarLibremente79133258[
+	label="+ jugarLibremente()"
+	style=filled
+	fillcolor=white
+	tooltip="Hombre
+
+null"
+	fontcolor=darkgreen
+];
 } 
 } 
 
@@ -223,11 +233,18 @@ Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXdespertar0;
 Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXdormir0;
 Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXenergiaActual0;
 Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXestaDormido0;
-Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXpuedeAvanzar104431;
 Hombre2127812561XXXJugarConRobot79133258 -> Robot79133258XXXretroceder104431;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXavanzar104431;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXdespertar0;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXdormir0;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXenergiaActual0;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXestaDormido0;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXpuedeAvanzar104431;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXretroceder104431;
 Robot79133258XXXavanzar104431 -> Robot79133258XXXpuedeAvanzar104431;
 Robot79133258XXXretroceder104431 -> Robot79133258XXXpuedeAvanzar104431;
 TestJuego804481360XXXmain1859653459 -> Hombre2127812561XXXJugarConRobot79133258;
+TestJuego804481360XXXmain1859653459 -> Hombre2127812561XXXjugarLibremente79133258;
     
 }
 @enduml

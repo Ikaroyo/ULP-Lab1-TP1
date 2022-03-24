@@ -93,9 +93,11 @@ subgraph cluster_2127812561 {
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)Hombre</TD></TR>
 <HR/>
+<TR><TD ALIGN="LEFT" >-   nombre: String [0..1]</TD></TR>
+<HR/>
 <TR><TD ALIGN="LEFT" >+ JugarConRobot(roboto: Robot)</TD></TR>
 <TR><TD ALIGN="LEFT" >- jugar(roboto: Robot)</TD></TR>
-<TR><TD ALIGN="LEFT" >- jugarLibremente(roboto: Robot)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ jugarLibremente(roboto: Robot)</TD></TR>
 </TABLE>>
 	style=filled
 	margin=0
