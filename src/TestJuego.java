@@ -15,6 +15,5 @@ public class TestJuego {
 
         System.out.println(pedrito.getNombre()+" va a jugar con el robotito");
         pedrito.jugarLibremente(robotito);
-        // algo
     }
 }
