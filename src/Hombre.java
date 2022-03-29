@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Hombre {
+    
+    //Atributos
     private String nombre;
 
     //constructor
