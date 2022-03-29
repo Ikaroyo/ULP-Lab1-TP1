@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Hombre {
-
+    
     //Atributos
     private String nombre;
 
@@ -59,36 +59,31 @@ public class Hombre {
                 System.out.println("Ingrese avanzar(a), retroceder(r) o dormir(d)");
                 respuesta = teclado.nextLine();
 
-                switch (respuesta) {
-                    case "a" -> {
-                        System.out.println("Cuantos pasos desea avanzar?");
-                        int pasos = tecladoNumerico.nextInt();
-                        if (roboto.puedeAvanzar(pasos)) {
-                            roboto.avanzar(pasos);
-                            System.out.println("El robot avanzo " + pasos + " Su energia es " + roboto.energiaActual());
-                        } else {
-                            System.out.println("El robot no puede avanzar " + pasos + " pasos");
-                        }
+                if (respuesta.equals("a")) {
+                    System.out.println("Cuantos pasos desea avanzar?");
+                    int pasos = tecladoNumerico.nextInt();
+                    if (roboto.puedeAvanzar(pasos)) {
+                        roboto.avanzar(pasos);
+                        System.out.println("El robot avanzo " + pasos + " Su energia es " + roboto.energiaActual());
+                    } else {
+                        System.out.println("El robot no puede avanzar " + pasos + " pasos");
+                    }
 
-                        break;
+                } else if (respuesta.equals("r")) {
+                    System.out.println("Cuantos pasos desea retroceder?");
+                    int pasos = tecladoNumerico.nextInt();
+                    if (roboto.puedeAvanzar(pasos)) {
+                        roboto.retroceder(pasos);
+                        System.out.println("El robot retrocedio " + pasos + " Su energia es " + roboto.energiaActual());
+                    } else {
+                        System.out.println("El robot no puede retroceder " + pasos + " pasos");
                     }
-                    case "r" -> {
-                        System.out.println("Cuantos pasos desea retroceder?");
-                        int pasos = tecladoNumerico.nextInt();
-                        if (roboto.puedeAvanzar(pasos)) {
-                            roboto.retroceder(pasos);
-                            System.out.println("El robot retrocedio " + pasos + " Su energia es " + roboto.energiaActual());
-                        } else {
-                            System.out.println("El robot no puede retroceder " + pasos + " pasos");
-                        }
 
-                        break;
-                    }
-                    case "d" -> {
-                        roboto.dormir();
-                        System.out.println("El robot se ha dormido");
-                    }
-                    default -> System.out.println("Ingrese una opcion valida");
+                } else if (respuesta.equals("d")) {
+                    roboto.dormir();
+                    System.out.println("El robot se ha dormido");
+                } else {
+                    System.out.println("Ingrese una opcion valida");
                 }
             }
         } else {
@@ -100,7 +95,6 @@ public class Hombre {
     public String getNombre(){
         return nombre;
     }
-
 
 
 }
