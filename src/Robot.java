@@ -69,7 +69,7 @@ Funcion de prueba de funcionamiento del robot
     }
 
 
-    public boolean bateriaLLena() {
+    public boolean bateriaLlena() {
         return bateria==1000;
     }
 
