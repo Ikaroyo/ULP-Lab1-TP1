@@ -1,6 +1,6 @@
 public class Robot {
 
-    // Variables
+    // Atributos
 
     private int bateria;
     private boolean estadoDormido;
