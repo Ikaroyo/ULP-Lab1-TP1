@@ -2,9 +2,9 @@ public class Robot {
 
     // Variables
 
-    int bateria;
-    boolean estadoDormido;
-    int cantidadDePasos;
+    private int bateria;
+    private boolean estadoDormido;
+    private int cantidadDePasos;
 
 
     // Constructor
@@ -12,9 +12,14 @@ public class Robot {
     Robot(){
         recargar();
         despertar();
-        //probarFuncionamiento();
+
+        // Llamada a funcion de prueba
+        // probarFuncionamiento();
 
     }
+
+/*
+Funcion de prueba de funcionamiento del robot
 
     private void probarFuncionamiento() {
         System.out.println("Probando funcionamiento");
@@ -30,7 +35,7 @@ public class Robot {
         System.out.printf("Bateria: %d\n", energiaActual());
         System.out.println("Listo para jugar");
     }
-
+*/
 
 
     // Metodos

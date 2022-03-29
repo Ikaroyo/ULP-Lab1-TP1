@@ -5,12 +5,13 @@ public class Hombre {
 
     //constructor
     Hombre(String name) {
+
         this.nombre = name;
     }
 
     //Metodos
 
-    public void JugarConRobot(Robot roboto) {
+    public void jugarConRobot(Robot roboto) {
         if (roboto.estaDormido()) {
             // Leer por teclado si o no y ejecutar roboto.despertar()
             System.out.println("El robot esta dormido, ¿Desea despertarlo? ingrese si para despertarlo");
