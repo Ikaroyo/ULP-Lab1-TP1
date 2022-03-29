@@ -4,7 +4,7 @@ public class Robot {
 
     private int bateria;
     private boolean estadoDormido;
-    //private int cantidadDePasos;
+
 
 
     // Constructor
