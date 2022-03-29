@@ -13,6 +13,7 @@ public class TestJuego {
         System.out.println(josecito.getNombre()+" va a jugar con el robotito");
         josecito.jugarConRobot(robotito);
 
+
         // vuelve a jugar el primer hombre usando los comandos de movimiento libre
         System.out.println(pedrito.getNombre()+" va a jugar con el robotito");
         pedrito.jugarLibremente(robotito);

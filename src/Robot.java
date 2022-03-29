@@ -4,7 +4,7 @@ public class Robot {
 
     private int bateria;
     private boolean estadoDormido;
-    private int cantidadDePasos;
+    //private int cantidadDePasos;
 
 
     // Constructor
@@ -65,8 +65,9 @@ Funcion de prueba de funcionamiento del robot
     }
 
     public void recargar() {
-        bateria=1000;
+        this.bateria = 1000;
     }
+
 
     public boolean bateriaLLena() {
         return bateria==1000;
@@ -85,7 +86,7 @@ Funcion de prueba de funcionamiento del robot
     }
 
     public boolean puedeAvanzar(int cantidadDePasos) {
-        return ((energiaActual() >= cantidadDePasos * 10 / 100) && !estaDormido());
+        return ((energiaActual() >= cantidadDePasos * 10 / 100) && !estaDormido() && !bateriaVacia());
     }
 
 
