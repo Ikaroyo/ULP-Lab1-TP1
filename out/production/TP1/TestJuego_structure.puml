@@ -117,11 +117,10 @@ subgraph cluster_79133258 {
 <TR><TD ALIGN="LEFT" >(C)Robot</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >-   bateria: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >-   cantidadDePasos: int [1]</TD></TR>
 <TR><TD ALIGN="LEFT" >-   estadoDormido: boolean [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ avanzar(cantidadDePasos: int)</TD></TR>
-<TR><TD ALIGN="LEFT" >+ bateriaLLena(): boolean</TD></TR>
+<TR><TD ALIGN="LEFT" >+ bateriaLlena(): boolean</TD></TR>
 <TR><TD ALIGN="LEFT" >+ bateriaVacia(): boolean</TD></TR>
 <TR><TD ALIGN="LEFT" >+ despertar()</TD></TR>
 <TR><TD ALIGN="LEFT" >+ dormir()</TD></TR>
