@@ -140,6 +140,16 @@ null"
 	fontcolor=darkgreen
 ];
 
+Robot79133258XXXbateriaLlena0[
+	label="+ bateriaLlena()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
 Robot79133258XXXdespertar0[
 	label="+ despertar()"
 	style=filled
@@ -182,6 +192,16 @@ null"
 
 Robot79133258XXXpuedeAvanzar104431[
 	label="+ puedeAvanzar()"
+	style=filled
+	fillcolor=white
+	tooltip="Robot
+
+null"
+	fontcolor=darkgreen
+];
+
+Robot79133258XXXrecargar0[
+	label="+ recargar()"
 	style=filled
 	fillcolor=white
 	tooltip="Robot
@@ -239,9 +259,11 @@ Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXdespertar0;
 Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXdormir0;
 Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXenergiaActual0;
 Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXestaDormido0;
+Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXrecargar0;
 Hombre2127812561XXXjugarLibremente79133258 -> Robot79133258XXXretroceder104431;
 Robot79133258XXXavanzar104431 -> Robot79133258XXXenergiaActual0;
 Robot79133258XXXavanzar104431 -> Robot79133258XXXpuedeAvanzar104431;
+Robot79133258XXXrecargar0 -> Robot79133258XXXbateriaLlena0;
 Robot79133258XXXretroceder104431 -> Robot79133258XXXenergiaActual0;
 Robot79133258XXXretroceder104431 -> Robot79133258XXXpuedeAvanzar104431;
 TestJuego804481360XXXmain1859653459 -> Hombre2127812561XXXjugarConRobot79133258;

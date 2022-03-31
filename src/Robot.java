@@ -43,7 +43,13 @@ public class Robot {
     }
 
     public void recargar() {
+        // increase battery by 100 until it reaches 1000
+        while (!bateriaLlena()) {
+            bateria = bateria + 100;
+        }
+        /*
         this.bateria = 1000;
+        */
     }
 
 

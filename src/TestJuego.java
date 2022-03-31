@@ -2,14 +2,14 @@ public class TestJuego {
     public static void main(String[] args) {
 
         Robot robotito = new Robot(); //Creo un robotito
-        Hombre pedrito = new Hombre("pedrito"); //Creo al primer hombre
+        Hombre pedrito = new Hombre("Pedrito"); //Creo al primer hombre
 
         // Primer hombre en jugar
         System.out.println(pedrito.getNombre()+" va a jugar con el robotito");
         pedrito.jugarConRobot(robotito);
 
         // Segundo hombre en jugar
-        Hombre josecito = new Hombre("josecito"); //Creo al segundo hombre
+        Hombre josecito = new Hombre("Josecito"); //Creo al segundo hombre
         System.out.println(josecito.getNombre()+" va a jugar con el robotito");
         josecito.jugarConRobot(robotito);
 
@@ -17,5 +17,4 @@ public class TestJuego {
         System.out.println(pedrito.getNombre()+" va a jugar con el robotito");
         pedrito.jugarLibremente(robotito);
     }
-
 }

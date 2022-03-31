@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Hombre {
     
     //Atributos
-    private String nombre;
+    private final String nombre;
 
     //constructor
     Hombre(String name) {
@@ -13,10 +13,10 @@ public class Hombre {
     //Metodos
 
     public void jugarConRobot(Robot roboto) {
+        Scanner teclado = new Scanner(System.in);
         if (roboto.estaDormido()) {
             // Leer por teclado si o no y ejecutar roboto.despertar()
             System.out.println("El robot esta dormido, ¿Desea despertarlo? ingrese si para despertarlo");
-            Scanner teclado = new Scanner(System.in);
             String respuesta = teclado.nextLine();
             if (respuesta.equals("si")) {
                 roboto.despertar();
@@ -35,26 +35,28 @@ public class Hombre {
         roboto.retroceder(20);
         System.out.println(roboto.energiaActual());
         roboto.dormir();
-
     }
 
     public void jugarLibremente(Robot roboto) {
 
         System.out.println("Desea jugar en modo libre con el robot? ingrese ok para jugar libremente");
         Scanner teclado = new Scanner(System.in);
-
         String respuesta = teclado.nextLine();
+
         if (respuesta.equals("ok")) {
 
             System.out.println("Despertando el robot");
             roboto.despertar();
 
-            //Repetir avanzar y retroceder hasta que el robot sea enviado a dormir
-            while (roboto.energiaActual() > 0 && !roboto.estaDormido()) {
-                System.out.println("Ingrese avanzar(a), retroceder(r) o dormir(d)");
-                respuesta = teclado.nextLine();
+            //Repetir avanzar, retroceder o cargar hasta que el robot sea enviado a dormir
+            while (!roboto.estaDormido()) {
+
+
+                System.out.println("Ingrese avanzar(a), retroceder(r), recargar(g) o dormir(d)");
+                String accion = teclado.next();
+
                 int pasos;
-                switch (respuesta) {
+                switch (accion) {
                     case "a" -> {
                         System.out.println("Cuantos pasos desea avanzar?");
                         pasos = teclado.nextInt();
@@ -64,6 +66,11 @@ public class Hombre {
                         System.out.println("Cuantos pasos desea retroceder?");
                         pasos = teclado.nextInt();
                         roboto.retroceder(pasos);
+                    }
+                    case "g" -> {
+                        roboto.recargar();
+                        System.out.println("El robot se ha recargado");
+                        System.out.println("Energia actual: " + roboto.energiaActual());
                     }
                     case "d" -> roboto.dormir();
                     default -> System.out.println("Ingrese una opcion valida");
