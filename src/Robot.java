@@ -5,63 +5,41 @@ public class Robot {
     private int bateria;
     private boolean estadoDormido;
 
-
-
     // Constructor
 
     Robot(){
         recargar();
         despertar();
-
-        // Llamada a funcion de prueba
-        // probarFuncionamiento();
-
     }
-
-/*
-Funcion de prueba de funcionamiento del robot
-
-    private void probarFuncionamiento() {
-        System.out.println("Probando funcionamiento");
-        avanzar(10);
-        System.out.printf("Bateria: %d\n", energiaActual());
-        retroceder(10);
-        System.out.printf("Bateria: %d\n", energiaActual());
-        dormir();
-        System.out.printf("Dormido: %b\n", estadoDormido);
-        despertar();
-        System.out.printf("Dormido: %b\n", estadoDormido);
-        recargar();
-        System.out.printf("Bateria: %d\n", energiaActual());
-        System.out.println("Listo para jugar");
-    }
-*/
-
 
     // Metodos
 
     public void avanzar(int cantidadDePasos) {
         if (puedeAvanzar(cantidadDePasos)) {
             bateria = bateria - cantidadDePasos*10/100;
+            System.out.println("El robot avanzo " + cantidadDePasos + " Su energia es " + this.energiaActual());
         } else  {
-            System.out.println("No puede avanzar");
+            System.out.println("No puede moverse");
         }
     }
 
     public void retroceder(int cantidadDePasos) {
         if (puedeAvanzar(cantidadDePasos)) {
             bateria = bateria - cantidadDePasos*10/100;
+            System.out.println("El robot retrocedio " + cantidadDePasos + " Su energia es " + this.energiaActual());
         } else  {
-            System.out.println("No puede avanzar");
+            System.out.println("No puede moverse");
         }
     }
 
     public void dormir() {
         estadoDormido=true;
+        System.out.println("El robot se ha dormido");
     }
 
     public void despertar() {
         estadoDormido=false;
+        System.out.println("El robot se ha despertado");
     }
 
     public void recargar() {
